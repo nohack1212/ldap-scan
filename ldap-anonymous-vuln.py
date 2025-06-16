@@ -1,4 +1,4 @@
-pip3 install ldap3
+
 
 from ldap3 import Server, Connection, ALL, SUBTREE
 from ldap3.core.exceptions import LDAPSocketOpenError, LDAPException
@@ -9,8 +9,7 @@ LDAP_PORT = 389
 USE_SSL = False
 BASE_DN = 'dc=remplace,dc=com'  
 
-# --- Définir un filtre LDAP avancé ---
-# Par exemple, rechercher tous les objets utilisateurs (person) avec un attribut donné
+
 LDAP_FILTER = '(objectClass=person)'  # Tu peux aussi tester: (cn=*), (uid=*), (sn=*)...
 
 # --- Liste des attributs à récupérer ---
